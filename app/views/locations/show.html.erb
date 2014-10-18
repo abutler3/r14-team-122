@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @location.image_url %>
+
 <p>
   <strong>Name:</strong>
   <%= @location.name %>
@@ -19,6 +21,7 @@
   <strong>Website:</strong>
   <%= @location.website %>
 </p>
+
 
 <%= link_to 'Edit', edit_location_path(@location), class: "btn btn-link" %> |
 <%= link_to 'Back', locations_path, class: "btn btn-link" %>
