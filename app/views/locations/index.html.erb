@@ -18,9 +18,9 @@
         <td><%= location.address %></td>
         <td><%= location.phone %></td>
         <td><%= location.website %></td>
-        <td><%= link_to 'Show', location %></td>
-        <td><%= link_to 'Edit', edit_location_path(location) %></td>
-        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', location, class: "btn btn-link" %></td>
+        <td><%= link_to 'Edit', edit_location_path(location), class: "btn btn-link" %></td>
+        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
       </tr>
     <% end %>
   </tbody>
