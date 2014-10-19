@@ -25,6 +25,19 @@
                         <strong>for you</strong>
                     </h2>
                     <hr>
+                    <div class="row">
+                      <h3>Coworking Spaces Found</h3>
+                      <% @locations.each do |location| %>
+                        <div class="col-md-4">
+                          <div class="thumbnail">
+                            <%= link_to image_tag(location.image.thumb.url, height: "133"), location %>
+                            <div class="caption">
+                              <h3><%= location.name %></h3>
+                            </div>
+                          </div>
+                        </div>
+                      <% end %>
+                    </div>
                     <!-- <img class="img-responsive img-border img-left" src="img/intro-pic.jpg" alt="">
                     <hr class="visible-xs">
                     <p>The boxes used in this template are nested inbetween a normal Bootstrap row and the start of your column layout. The boxes will be full-width boxes, so if you want to make them smaller then you will need to customize.</p>
