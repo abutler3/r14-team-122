@@ -29,7 +29,15 @@
   </div>
   <div class="form-group">
     <%= f.label :image %><br>
+    <%= image_tag(@user.avatar_url) if @user.avatar? %>
     <%= f.file_field :image, class: "form-control" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <label>
+      <%= f.check_box :remove_avatar %>
+      Remove avatar
+    </label>
   </div>
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>
