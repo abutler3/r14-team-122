@@ -20,7 +20,7 @@
                 <%= link_to image_tag(location.image.thumb.url, height: "133"), location %>
                 <div class="caption">
                   <h3><%= location.name %></h3>
-                  <% if user_signed_in? && current_user.admin? %>
+                  <% if current_user.admin? %>
                     <%= link_to 'Edit', edit_location_path(location), class: "btn btn-link" %>
                     <%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
                   <% end %>
@@ -57,9 +57,9 @@
           </table>
         </div> -->
         <br>
-        <% if user_signed_in? %>
+        <!-- <% if user_signed_in? %> -->
           <%= link_to 'New Location', new_location_path %>
-        <% end %>
+        <!-- <% end %> -->
       </div>
     </div>
   </div>
