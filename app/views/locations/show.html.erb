@@ -24,7 +24,7 @@
           <%= @location.website %>
         </p>
 
-
+        <%= link_to "Write a Review", new_location_review_path(@location), class: "btn btn-primary" %><br>
         <%= link_to 'Edit', edit_location_path(@location), class: "btn btn-link" %> |
         <%= link_to 'Back', locations_path, class: "btn btn-link" %>
       </div>
