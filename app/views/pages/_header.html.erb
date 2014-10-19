@@ -13,7 +13,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">Business Casual</a>
+                <%= link_to "Mari", root_path, class: "navbar-brand" %>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -25,11 +25,15 @@
                         <%= link_to "About", pages_about_path %>
                     </li>
                     <li>
-                        <%= link_to "Contact", pages_contact_path %>
+                        <%= link_to "View All Spaces", locations_path %>
                     </li>
-                    <li>
-                        <%= link_to "View All Spaces", "#" %>
-                    </li>
+                    <% if user_signed_in? %>
+                      <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+                      <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+                    <% else %>
+                      <li><%= link_to "Sign up", new_user_registration_path %></li>
+                      <li><%= link_to "Sign in", new_user_session_path %></li>
+                    <% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
