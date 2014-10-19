@@ -29,14 +29,14 @@
   </div>
   <div class="form-group">
     <%= f.label :image %><br>
-    <%= image_tag(@user.avatar_url) if @user.avatar? %>
+    <%= image_tag(@location.image_url) if @location.image? %>
     <%= f.file_field :image, class: "form-control" %>
   </div>
   <br>
   <div class="form-group">
     <label>
-      <%= f.check_box :remove_avatar %>
-      Remove avatar
+      <%= f.check_box :remove_image %>
+      Remove image
     </label>
   </div>
   <div class="actions">
