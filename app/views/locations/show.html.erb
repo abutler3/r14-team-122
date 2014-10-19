@@ -33,7 +33,7 @@
           <h4>No reviews yet. Be the first to write one!</h4>
         <% else %>
           <% @reviews.each do |review| %>
-            <p><%= review.rating %></p>
+            <div class="star-rating" data-score=<%= review.rating %>></div>
             <p><%= review.comment %></p>
           <% end %>
         <% end %>
@@ -41,3 +41,13 @@
     </div>
   </div>
 </div>
+
+<script>
+  $('.star-rating').raty({
+    path: '/assets',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    }
+  });
+</script>
