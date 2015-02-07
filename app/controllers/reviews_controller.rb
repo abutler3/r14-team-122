@@ -71,7 +71,7 @@ class ReviewsController < ApplicationController
     end
 
     def check_user
-      unless (@review.user == current_user) )
+      unless (@review.user == current_user)
         redirect_to root_url, alert: "Sorry, I don't think you wrote this review"
       end
     end
