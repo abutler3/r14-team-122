@@ -48,7 +48,7 @@
             <p><%= h(review.comment).gsub(/\n/, '<br>').html_safe %></p>
             <h5><%= review.user.first_name.capitalize %> <%= review.user.last_name.capitalize[0] %>. | <%= review.created_at.strftime("%-m/%-d/%-y") %></h5>
             <% if user_signed_in? %>
-              <% if (review.user == current_user) || (current_user.admin?) %>
+              <% if (review.user == current_user) %>
                 <%= link_to "Edit", edit_location_review_path(@location, review) %> |
                 <%= link_to "Delete", location_review_path(@location, review), method: :delete %>
               <% end %>

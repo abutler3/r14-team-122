@@ -20,10 +20,10 @@
                 <%= link_to image_tag(location.image.thumb.url, height: "133"), location %>
                 <div class="caption">
                   <h3><%= location.name %></h3>
-                  <% if current_user.admin? %>
+                  <%# if current_user.admin? %>
                     <%= link_to 'Edit', edit_location_path(location), class: "btn btn-link" %>
                     <%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
-                  <% end %>
+                  <%# end %>
                 </div>
               </div>
             </div>
